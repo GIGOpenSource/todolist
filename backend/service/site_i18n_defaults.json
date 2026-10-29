@@ -1,0 +1,882 @@
+{
+  "en": {
+    "hook": "Free. Private by design. Built for every day.",
+    "slogan": "Become a better you.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Sign in",
+    "ctaDownload": "Download free",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "zh-Hans": {
+    "hook": "免费 · 注重隐私 · 为每天而做",
+    "slogan": "让自己，变得更好。",
+    "support": "安静好用的待办：云端同步、看清每周节奏，把进步收成可读的汇报。",
+    "ctaLogin": "登录",
+    "ctaDownload": "免费下载",
+    "showcaseTitle": "看看 Upgrade 怎么用",
+    "showcaseSub": "任务、日历、统计 —— 一条清晰的升级回路，没有多余噪音。",
+    "productTitle": "给想稳定进步的人",
+    "productSub": "不是嘈杂的效率全家桶，只做待办、节奏与汇报，尊重你的专注。",
+    "downloadTitle": "在你的设备上安装 Upgrade",
+    "downloadSub": "安卓手机 / Pad，iPhone / iPad —— 选你正在用的那一台。",
+    "desireTitle": "今天就开始升级",
+    "desireSub": "网页直接登录，或下载到你手里的设备。",
+    "footerNote": "Upgrade — 免费云端同步待办",
+    "shots": [
+      {
+        "title": "任务跟着你走",
+        "desc": "记下真正重要的事，手机与平板同步，进度不丢。"
+      },
+      {
+        "title": "日历看见节奏",
+        "desc": "按天回看创建与完成，不再淹没在琐事里。"
+      },
+      {
+        "title": "统计与周期汇报",
+        "desc": "连续天数、完成率，还有能留下来的周报高光。"
+      }
+    ],
+    "features": [
+      {
+        "title": "云端同步",
+        "desc": "清单时间戳合并，换设备也能接上昨天的进度。"
+      },
+      {
+        "title": "日历节奏",
+        "desc": "月视图 + 日列表，看见你真正推进的日子。"
+      },
+      {
+        "title": "周期汇报",
+        "desc": "选定区间生成周报，还能导出高光海报。"
+      }
+    ]
+  },
+  "zh-Hant": {
+    "hook": "免費 · 重視隱私 · 為每天而做",
+    "slogan": "讓自己，變得更好。",
+    "support": "安靜好用的待辦：雲端同步、看清每週節奏，把進步收成可讀的彙報。",
+    "ctaLogin": "登入",
+    "ctaDownload": "免費下載",
+    "showcaseTitle": "看看 Upgrade 怎麼用",
+    "showcaseSub": "任務、日曆、統計 —— 一條清晰的升級迴路，沒有多餘噪音。",
+    "productTitle": "給想穩定進步的人",
+    "productSub": "不是嘈雜的效率全家桶，只做待辦、節奏與彙報，尊重你的專注。",
+    "downloadTitle": "在你的裝置上安裝 Upgrade",
+    "downloadSub": "Android 手機 / Pad，iPhone / iPad —— 選你正在用的那一台。",
+    "desireTitle": "今天就開始升級",
+    "desireSub": "網頁直接登入，或下載到你手裡的裝置。",
+    "footerNote": "Upgrade — 免費雲端同步待辦",
+    "shots": [
+      {
+        "title": "任務跟著你走",
+        "desc": "記下真正重要的事，手機與平板同步，進度不丟。"
+      },
+      {
+        "title": "日曆看見節奏",
+        "desc": "按天回看建立與完成，不再淹沒在瑣事裡。"
+      },
+      {
+        "title": "統計與週期彙報",
+        "desc": "連續天數、完成率，還有能留下來的週報高光。"
+      }
+    ],
+    "features": [
+      {
+        "title": "雲端同步",
+        "desc": "清單時間戳合併，換裝置也能接上昨天的進度。"
+      },
+      {
+        "title": "日曆節奏",
+        "desc": "月視圖 + 日列表，看見你真正推進的日子。"
+      },
+      {
+        "title": "週期彙報",
+        "desc": "選定區間生成週報，還能匯出高光海報。"
+      }
+    ]
+  },
+  "ja": {
+    "hook": "無料。プライバシー重視。毎日のために。",
+    "slogan": "より良い自分へ。",
+    "support": "落ち着いたタスクアプリ。クラウド同期、週間リズム、残せるレポート。",
+    "ctaLogin": "ログイン",
+    "ctaDownload": "無料ダウンロード",
+    "showcaseTitle": "Upgrade の画面",
+    "showcaseSub": "タスク・カレンダー・統計 — 静かなアップグレードのループ。",
+    "productTitle": "着実に前へ進みたい人へ",
+    "productSub": "騒がしい生産性スイートではなく、タスク・リズム・レポートだけ。",
+    "downloadTitle": "デバイスにインストール",
+    "downloadSub": "Android スマホ / タブレット、iPhone / iPad。",
+    "desireTitle": "今日からアップグレード",
+    "desireSub": "Web でログインするか、手元の端末にダウンロード。",
+    "footerNote": "Upgrade — 無料のクラウド同期タスク",
+    "shots": [
+      {
+        "title": "タスクはあなたと一緒に",
+        "desc": "大切なことを記録。端末を替えても進捗は続き。"
+      },
+      {
+        "title": "リズムが見えるカレンダー",
+        "desc": "作った日・終えた日を、一日ずつ確かめる。"
+      },
+      {
+        "title": "統計と期間レポート",
+        "desc": "連続日数、完了率、残せる週次レポート。"
+      }
+    ],
+    "features": [
+      {
+        "title": "クラウド同期",
+        "desc": "リスト時刻で統合。スマホもタブレットも同じ進捗。"
+      },
+      {
+        "title": "カレンダーのリズム",
+        "desc": "月表示と日リストで、進んだ日が見える。"
+      },
+      {
+        "title": "期間レポート",
+        "desc": "期間を選んで週報を生成。ポスターも。"
+      }
+    ]
+  },
+  "ko": {
+    "hook": "무료. 프라이버시 우선. 매일 사용.",
+    "slogan": "더 나은 내가 되세요.",
+    "support": "차분한 할 일 앱. 클라우드 동기화, 주간 리듬, 남길 수 있는 리포트.",
+    "ctaLogin": "로그인",
+    "ctaDownload": "무료 다운로드",
+    "showcaseTitle": "Upgrade 화면 미리보기",
+    "showcaseSub": "할 일 · 캘린더 · 통계 — 조용한 성장의 루프.",
+    "productTitle": "꾸준히 성장하고 싶은 사람을 위해",
+    "productSub": "시끄러운 생산성 모음이 아니라 할 일·리듬·리포트만.",
+    "downloadTitle": "기기에 Upgrade 설치",
+    "downloadSub": "Android 폰/태블릿, iPhone/iPad.",
+    "desireTitle": "오늘부터 업그레이드",
+    "desireSub": "웹에서 로그인하거나 손에 든 기기에 다운로드.",
+    "footerNote": "Upgrade — 무료 클라우드 동기화 할 일",
+    "shots": [
+      {
+        "title": "할 일이 함께 따라옵니다",
+        "desc": "중요한 일을 기록하고 기기 간 동기화."
+      },
+      {
+        "title": "리듬이 보이는 캘린더",
+        "desc": "만든 날과 끝낸 날을 하루씩 확인."
+      },
+      {
+        "title": "통계와 기간 리포트",
+        "desc": "연속 일수, 완료율, 주간 리포트."
+      }
+    ],
+    "features": [
+      {
+        "title": "클라우드 동기화",
+        "desc": "목록 타임스탬프로 병합. 기기 바꿔도 이어집니다."
+      },
+      {
+        "title": "캘린더 리듬",
+        "desc": "월 보기와 일 목록으로 전진한 날을 봅니다."
+      },
+      {
+        "title": "기간 리포트",
+        "desc": "기간을 골라 주간 리포트 생성, 포스터 내보내기."
+      }
+    ]
+  },
+  "fr": {
+    "hook": "Gratuit. Privé. Pour chaque jour.",
+    "slogan": "Devenez une meilleure version de vous.",
+    "support": "Une app de tâches calme : sync cloud, rythme hebdo, rapports à garder.",
+    "ctaLogin": "Connexion",
+    "ctaDownload": "Télécharger gratis",
+    "showcaseTitle": "Upgrade en action",
+    "showcaseSub": "Tâches, calendrier, stats — une boucle nette, sans bruit.",
+    "productTitle": "Pour un progrès régulier",
+    "productSub": "Pas une suite bruyante — tâches, rythme, rapports.",
+    "downloadTitle": "Installez Upgrade",
+    "downloadSub": "Android téléphone & tablette, iPhone & iPad.",
+    "desireTitle": "Commencez aujourd’hui",
+    "desireSub": "Connectez-vous sur le web ou téléchargez l’app.",
+    "footerNote": "Upgrade — tâches synchronisées gratuites",
+    "shots": [
+      {
+        "title": "Des tâches qui vous suivent",
+        "desc": "Notez l’essentiel. Synchronisez sans perdre le fil."
+      },
+      {
+        "title": "Calendrier du vrai rythme",
+        "desc": "Voyez ce que vous avez créé et fini, jour après jour."
+      },
+      {
+        "title": "Stats & rapports",
+        "desc": "Séries, achèvement, rapports hebdo à conserver."
+      }
+    ],
+    "features": [
+      {
+        "title": "Sync cloud",
+        "desc": "Fusion par horodatage. Même progrès sur tous vos appareils."
+      },
+      {
+        "title": "Rythme calendrier",
+        "desc": "Vue mois et liste jour pour voir l’avancement."
+      },
+      {
+        "title": "Rapports de période",
+        "desc": "Choisissez une plage, générez un rapport hebdo."
+      }
+    ]
+  },
+  "de": {
+    "hook": "Kostenlos. Privat. Für jeden Tag.",
+    "slogan": "Werde eine bessere Version von dir.",
+    "support": "Ruhige Aufgaben-App: Cloud-Sync, Wochenrhythmus, Berichte zum Behalten.",
+    "ctaLogin": "Anmelden",
+    "ctaDownload": "Kostenlos laden",
+    "showcaseTitle": "Upgrade im Einsatz",
+    "showcaseSub": "Aufgaben, Kalender, Statistik — klarer Loop ohne Lärm.",
+    "productTitle": "Für stetigen Fortschritt",
+    "productSub": "Kein lautes Produktivitäts-Suite — nur Aufgaben, Rhythmus, Berichte.",
+    "downloadTitle": "Upgrade installieren",
+    "downloadSub": "Android-Handy & Tablet, iPhone & iPad.",
+    "desireTitle": "Heute starten",
+    "desireSub": "Im Web anmelden oder die App laden.",
+    "footerNote": "Upgrade — kostenlose Cloud-Aufgaben",
+    "shots": [
+      {
+        "title": "Aufgaben, die mitgehen",
+        "desc": "Halte fest, was zählt. Sync über Geräte hinweg."
+      },
+      {
+        "title": "Kalender für echten Rhythmus",
+        "desc": "Sieh Tag für Tag, was du begonnen und beendet hast."
+      },
+      {
+        "title": "Statistik & Berichte",
+        "desc": "Serien, Abschlussrate, Wochenberichte."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud-Sync",
+        "desc": "Listen-Zeitstempel. Fortschritt folgt auf jedes Gerät."
+      },
+      {
+        "title": "Kalender-Rhythmus",
+        "desc": "Monatsansicht und Tagesliste zeigen echten Fortschritt."
+      },
+      {
+        "title": "Zeitraum-Berichte",
+        "desc": "Zeitraum wählen, Wochenbericht erzeugen."
+      }
+    ]
+  },
+  "es": {
+    "hook": "Gratis. Privado. Para cada día.",
+    "slogan": "Conviértete en una mejor versión de ti.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Iniciar sesión",
+    "ctaDownload": "Descargar",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "pt": {
+    "hook": "Grátis. Privado. Para cada dia.",
+    "slogan": "Torne-se uma versão melhor de você.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Entrar",
+    "ctaDownload": "Baixar",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "it": {
+    "hook": "Gratis. Privato. Per ogni giorno.",
+    "slogan": "Diventa una versione migliore di te.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Accedi",
+    "ctaDownload": "Scarica",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "ru": {
+    "hook": "Бесплатно. Приватно. На каждый день.",
+    "slogan": "Станьте лучше собой.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Войти",
+    "ctaDownload": "Скачать",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "vi": {
+    "hook": "Miễn phí. Riêng tư. Cho mỗi ngày.",
+    "slogan": "Trở thành phiên bản tốt hơn của bạn.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Đăng nhập",
+    "ctaDownload": "Tải về",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "th": {
+    "hook": "ฟรี เป็นส่วนตัว เพื่อทุกวัน",
+    "slogan": "เป็นตัวเองที่ดีกว่า.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "เข้าสู่ระบบ",
+    "ctaDownload": "ดาวน์โหลด",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "id": {
+    "hook": "Gratis. Privat. Untuk setiap hari.",
+    "slogan": "Jadilah versi lebih baik dari dirimu.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Masuk",
+    "ctaDownload": "Unduh",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "ms": {
+    "hook": "Percuma. Peribadi. Untuk setiap hari.",
+    "slogan": "Jadi versi lebih baik diri anda.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Log masuk",
+    "ctaDownload": "Muat turun",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "tr": {
+    "hook": "Ücretsiz. Özel. Her gün için.",
+    "slogan": "Daha iyi bir sen ol.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Giriş yap",
+    "ctaDownload": "İndir",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "pl": {
+    "hook": "Za darmo. Prywatnie. Na każdy dzień.",
+    "slogan": "Stań się lepszą wersją siebie.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Zaloguj",
+    "ctaDownload": "Pobierz",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "nl": {
+    "hook": "Gratis. Privé. Voor elke dag.",
+    "slogan": "Word een betere versie van jezelf.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Aanmelden",
+    "ctaDownload": "Downloaden",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "sv": {
+    "hook": "Gratis. Privat. För varje dag.",
+    "slogan": "Bli en bättre version av dig.",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "Logga in",
+    "ctaDownload": "Ladda ner",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  },
+  "hi": {
+    "hook": "मुफ़्त। निजी। हर दिन के लिए।",
+    "slogan": "बेहतर खुद बनें।",
+    "support": "A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress into reports you can keep.",
+    "ctaLogin": "साइन इन",
+    "ctaDownload": "डाउनलोड",
+    "showcaseTitle": "See Upgrade in action",
+    "showcaseSub": "Tasks, calendar, and stats — the loop that helps you improve without the noise.",
+    "productTitle": "Upgrade is for people who want steady progress",
+    "productSub": "Not another noisy productivity suite — just tasks, rhythm, and reports that respect your focus.",
+    "downloadTitle": "Get Upgrade on your device",
+    "downloadSub": "Android phone & tablet, iPhone & iPad — pick yours.",
+    "desireTitle": "Start upgrading today",
+    "desireSub": "Sign in on the web, or download the app for the device in your hands.",
+    "footerNote": "Upgrade — free cloud-synced tasks",
+    "shots": [
+      {
+        "title": "Tasks that stay with you",
+        "desc": "Capture what matters. Sync across devices without losing momentum."
+      },
+      {
+        "title": "Calendar for real rhythm",
+        "desc": "See what you created and finished — day by day, not in a blur."
+      },
+      {
+        "title": "Stats & period reports",
+        "desc": "Streaks, completion, and weekly reports that make progress visible."
+      }
+    ],
+    "features": [
+      {
+        "title": "Cloud sync",
+        "desc": "List-timestamp merge so your progress follows you across phone and tablet."
+      },
+      {
+        "title": "Calendar rhythm",
+        "desc": "A month view and day list that show when you actually moved forward."
+      },
+      {
+        "title": "Period reports",
+        "desc": "Pick a range, generate a clear weekly report — even export a highlight poster."
+      }
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+<!-- Upgrade Todolist 官网首页：介绍产品并提供 H5 登录与客户端下载入口。 -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Upgrade — Become a better you. Cloud-synced tasks, calendar rhythm, period reports." />
+    <meta name="color-scheme" content="light dark" />
+    <title>Upgrade</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/site.css" />
+    <script>
+      ;(function () {
+        try {
+          var t = localStorage.getItem('upgrade_site_theme')
+          if (!t) {
+            t =
+              window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light')
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+    </div>
+
+    <div class="page">
+      <header class="shell topnav topnav--drawer" id="topNav">
+        <a class="brand-lockup" href="./index.html" aria-label="Upgrade home">
+          <img src="./assets/logo.png" width="36" height="36" alt="" />
+          <span class="brand-word">Upgrade</span>
+        </a>
+        <div class="nav-chrome">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Theme">
+            <span id="themeIcon" aria-hidden="true">◐</span>
+          </button>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="navActions"
+          >
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+          </button>
+        </div>
+        <nav class="nav-actions" id="navActions" aria-label="Primary">
+          <a class="nav-link" href="#product" data-i18n="navProduct">Product</a>
+          <a class="nav-link" href="#download" data-i18n="navDownload">Download</a>
+          <a class="nav-link" href="./privacy.html" data-i18n="navPrivacy">Privacy</a>
+          <a class="nav-link" href="./terms.html" data-i18n="navTerms">Terms</a>
+          <div class="lang-picker" id="langPicker">
+            <button
+              type="button"
+              class="lang-trigger"
+              id="langTrigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="langMenu"
+            >
+              <span class="lang-trigger-text" id="langTriggerLabel">English</span>
+              <svg class="lang-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                <path
+                  d="M2.5 4.5L6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="lang-menu" id="langMenu" role="listbox" hidden></ul>
+          </div>
+          <div class="auth-guest" id="authGuest">
+            <a class="nav-control" id="navLogin" href="#" data-i18n="navLogin">Sign in</a>
+          </div>
+          <div class="auth-user" id="authUser" hidden>
+            <div class="nav-account-group">
+              <span class="nav-account" id="navAccount" title="">
+                <span class="nav-avatar" id="navAvatar" aria-hidden="true">
+                  <img id="navAvatarImg" alt="" hidden />
+                  <span class="nav-avatar-letter" id="navAvatarLetter"></span>
+                </span>
+                <span class="nav-account-name" id="navAccountName"></span>
+              </span>
+              <button type="button" class="nav-control" id="navLogout" data-i18n="navLogout">
+                Log out
+              </button>
+            </div>
+            <a class="nav-control nav-control-primary" id="navEnter" href="#" data-i18n="ctaEnter">Enter app</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="shell hero" aria-labelledby="heroBrand">
+          <div class="hero-copy">
+            <p class="hero-hook" data-i18n="hook">Free. Private by design. Built for every day.</p>
+            <h1 class="hero-brand" id="heroBrand">Upgrade</h1>
+            <p class="hero-slogan" data-i18n="slogan">Become a better you.</p>
+            <p class="hero-support" data-i18n="support">
+              A calm task app that syncs to the cloud, shows your weekly rhythm, and turns progress
+              into reports you can keep.
+            </p>
+            <div class="cta-row cta-guest" id="ctaGuest">
+              <a class="btn btn-primary" id="ctaLogin" href="#" data-i18n="ctaLogin">Sign in</a>
+              <a class="btn btn-secondary" href="#download" data-i18n="ctaDownload">Download free</a>
+            </div>
+            <div class="cta-row cta-user" id="ctaUser" hidden>
+              <a class="btn btn-primary" id="ctaEnter" href="#" data-i18n="ctaEnter">Enter app</a>
+              <button type="button" class="btn btn-secondary" id="ctaLogout" data-i18n="navLogout">Log out</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="phone-stack">
+              <img class="phone phone-back" src="./assets/shots/stats.svg" alt="" />
+              <img class="phone phone-mid" src="./assets/shots/calendar.svg" alt="" />
+              <img class="phone phone-front" src="./assets/shots/tasks.svg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="shell section showcase-section" id="product" aria-labelledby="showcaseTitle">
+          <div class="showcase-intro">
+            <h2 class="section-title" id="showcaseTitle" data-i18n="showcaseTitle">See Upgrade in action</h2>
+            <p class="section-sub" data-i18n="showcaseSub">
+              Tasks, calendar, and stats — the loop that helps you improve without the noise.
+            </p>
+          </div>
+          <div class="shot-grid" id="shotGrid"></div>
+        </section>
+
+        <section class="shell section features-section" aria-labelledby="productTitle">
+          <div class="features-intro">
+            <h2 class="section-title" id="productTitle" data-i18n="productTitle">
+              Upgrade is for people who want steady progress
+            </h2>
+            <p class="section-sub" data-i18n="productSub">
+              Not another noisy productivity suite — just tasks, rhythm, and reports that respect your
+              focus.
+            </p>
+          </div>
+          <ul class="feature-list" id="featureList"></ul>
+        </section>
+
+        <section class="shell section" id="download" aria-labelledby="downloadTitle">
+          <h2 class="section-title" id="downloadTitle" data-i18n="downloadTitle">
+            Get Upgrade on your device
+          </h2>
+          <p class="section-sub" data-i18n="downloadSub">
+            Android phone &amp; tablet, iPhone &amp; iPad — pick yours.
+          </p>
+          <div class="download-grid" id="downloadGrid"></div>
+        </section>
+
+        <section class="shell section desire" aria-labelledby="desireTitle">
+          <h2 class="section-title" id="desireTitle" data-i18n="desireTitle">Start upgrading today</h2>
+          <p class="section-sub" data-i18n="desireSub">
+            Sign in on the web, or download the app for the device in your hands.
+          </p>
+          <div class="cta-row cta-guest" id="ctaGuestBottom">
+            <a class="btn btn-primary" id="ctaLoginBottom" href="#" data-i18n="ctaLogin">Sign in</a>
+            <a class="btn btn-secondary" href="#download" data-i18n="ctaDownload">Download free</a>
+          </div>
+          <div class="cta-row cta-user" id="ctaUserBottom" hidden>
+            <a class="btn btn-primary" id="ctaEnterBottom" href="#" data-i18n="ctaEnter">Enter app</a>
+            <button type="button" class="btn btn-secondary" id="ctaLogoutBottom" data-i18n="navLogout">
+              Log out
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="shell site-footer">
+        <div class="footer-row">
+          <p class="footer-note" data-i18n="footerNote">Upgrade — free cloud-synced tasks</p>
+          <div class="footer-links">
+            <a href="./privacy.html" data-i18n="privacy">Privacy Policy</a>
+            <a href="./terms.html" data-i18n="terms">Terms of Use</a>
+            <a id="footerContact" href="mailto:you@example.com">you@example.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path
+          d="M12 5.5v13M6.5 11 12 5.5 17.5 11"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/site.js"></script>
+  </body>
+</html>

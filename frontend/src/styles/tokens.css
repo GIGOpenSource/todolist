@@ -1,0 +1,17 @@
+/* Design tokens — colors applied at runtime via stores/theme.js
+   Layout scale aligned to Lark / Feishu Docs desktop proportions. */
+:root {
+  --font: "Manrope", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    sans-serif;
+  --radius: 16px;
+  --radius-sm: 12px;
+  /* Lark workspace nav ≈ 220; doc default body ≈ 720; wide ≈ 960–1000 */
+  --sidebar-w: 220px;
+  --topbar-h: 52px;
+  --max-main: 1280px;
+  --content-narrow: 720px;
+  --page-pad-x: 40px;
+  --page-pad-y: 20px;
+  --content-gap: 16px;
+  --nav-item-h: 34px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upgrade auth bridge</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      ;(function () {
+        var AUTH_KEY = 'upgrade_site_auth'
+        var AUTH_HASH_PREFIX = 'upgrade_site_auth='
+        var MSG_TYPE = 'upgrade_auth_bridge'
+
+        function post(payload) {
+          var msg = Object.assign({ type: MSG_TYPE, source: 'site' }, payload || {})
+          try {
+            if (window.parent && window.parent !== window) {
+              window.parent.postMessage(msg, '*')
+            }
+          } catch (e) {}
+        }
+
+        function readSession() {
+          try {
+            var raw = localStorage.getItem(AUTH_KEY)
+            if (!raw) return null
+            var data = JSON.parse(raw)
+            if (!data || !data.username || !data.access_token) return null
+            return {
+              username: String(data.username || ''),
+              nickname: String(data.nickname || '').trim(),
+              avatar: String(data.avatar || ''),
+              access_token: String(data.access_token || ''),
+              refresh_token: String(data.refresh_token || ''),
+            }
+          } catch (e) {
+            return null
+          }
+        }
+
+        function writeSession(data) {
+          try {
+            if (!data || !data.username || !data.access_token) {
+              localStorage.removeItem(AUTH_KEY)
+              return
+            }
+            var avatar = String(data.avatar || '')
+            if (!/^https?:\/\//i.test(avatar)) avatar = ''
+            localStorage.setItem(
+              AUTH_KEY,
+              JSON.stringify({
+                username: String(data.username || ''),
+                nickname: String(data.nickname || '').trim(),
+                avatar: avatar,
+                access_token: String(data.access_token || ''),
+                refresh_token: String(data.refresh_token || ''),
+              }),
+            )
+          } catch (e) {}
+        }
+
+        function clearSession() {
+          try {
+            localStorage.removeItem(AUTH_KEY)
+          } catch (e) {}
+        }
+
+        function consumeHash() {
+          try {
+            var hash = String(location.hash || '')
+            var idx = hash.indexOf(AUTH_HASH_PREFIX)
+            if (idx === -1) return false
+            var encoded = hash.slice(idx + AUTH_HASH_PREFIX.length)
+            var data = JSON.parse(decodeURIComponent(encoded))
+            writeSession(data)
+            history.replaceState(null, '', location.pathname + location.search)
+            return true
+          } catch (e) {
+            return false
+          }
+        }
+
+        var params = new URLSearchParams(location.search || '')
+        var action = params.get('action') || 'probe'
+
+        if (action === 'logout') {
+          clearSession()
+          post({ action: 'cleared' })
+          return
+        }
+
+        if (consumeHash() || action === 'store') {
+          post({ action: 'stored', session: readSession() })
+          return
+        }
+
+        // probe (default)
+        post({ action: 'session', session: readSession() })
+      })()
+    </script>
+  </body>
+</html>

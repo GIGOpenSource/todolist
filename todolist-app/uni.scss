@@ -1,0 +1,20 @@
+/* Legacy SCSS aliases — prefer CSS vars from App.vue / theme.js */
+
+$ios-bg: var(--app-bg);
+$ios-label: var(--app-label);
+$ios-secondary: var(--app-secondary);
+$ios-tertiary: var(--app-tertiary);
+$ios-separator: var(--app-separator);
+$ios-tint: var(--app-tint);
+$ios-tint-soft: var(--app-tint-soft);
+$ios-green: var(--app-success);
+$ios-red: var(--app-danger);
+$ios-fill: var(--app-fill);
+
+$ios-radius-sm: 12px;
+$ios-radius-md: 16px;
+$ios-radius-lg: 22px;
+$ios-radius-pill: 999px;
+
+$ios-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+  "PingFang SC", "Helvetica Neue", sans-serif;

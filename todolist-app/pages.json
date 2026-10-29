@@ -1,0 +1,200 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/register/register",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000"
+        }
+      }
+    },
+    {
+      "path": "pages/legal/privacy",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000"
+        }
+      }
+    },
+    {
+      "path": "pages/legal/terms",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000"
+        }
+      }
+    },
+    {
+      "path": "pages/todos/todos",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/notes/notes",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/calendar/calendar",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/stats/stats",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000",
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/report/report",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000"
+        }
+      }
+    },
+    {
+      "path": "pages/notifications/notifications",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F2F2F7",
+        "app-plus": {
+          "titleNView": false,
+          "statusBarBackground": "#00000000"
+        }
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Upgrade",
+    "navigationBarBackgroundColor": "#00000000",
+    "backgroundColor": "#F2F2F7",
+    "backgroundColorTop": "#F2F2F7",
+    "backgroundColorBottom": "#F2F2F7",
+    "app-plus": {
+      "titleNView": false,
+      "statusBarBackground": "#00000000"
+    }
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#8E8E93",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/todos/todos",
+        "text": "Tasks",
+        "iconPath": "static/tab/task.png",
+        "selectedIconPath": "static/tab/task_active.png"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "text": "Notes",
+        "iconPath": "static/tab/notes.png",
+        "selectedIconPath": "static/tab/notes_active.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "Calendar",
+        "iconPath": "static/tab/calendar.png",
+        "selectedIconPath": "static/tab/calendar_active.png"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "Stats",
+        "iconPath": "static/tab/stats.png",
+        "selectedIconPath": "static/tab/stats_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "Profile",
+        "iconPath": "static/tab/profile.png",
+        "selectedIconPath": "static/tab/profile_active.png"
+      }
+    ]
+  }
+}

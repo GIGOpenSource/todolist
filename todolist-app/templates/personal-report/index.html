@@ -1,0 +1,1838 @@
+<!-- 个人汇报 HTML 模板（导出/海报用）。 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>个人汇报 · Contens</title>
+  <meta name="description" content="产品 / 运营 / 设计 / 开发 / 投放通用个人可视化汇报" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f1b2d;
+      --ink-soft: #2a3b52;
+      --muted: #5d6f86;
+      --line: rgba(15, 27, 45, 0.12);
+      --surface: rgba(255, 255, 255, 0.7);
+      --surface-strong: rgba(255, 255, 255, 0.9);
+      --accent: #1a6dff;
+      --accent-deep: #0d4fd6;
+      --accent-soft: rgba(26, 109, 255, 0.12);
+      --warn: #d97706;
+      --warn-soft: rgba(217, 119, 6, 0.12);
+      --bg-a: #e8f0fb;
+      --bg-b: #f3f6fb;
+      --bg-c: #e4edf8;
+      --radius: 16px;
+      --max: 1120px;
+      --shadow-soft: 0 16px 40px rgba(15, 45, 96, 0.1);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --page-pad: 1rem;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background:
+        radial-gradient(1000px 640px at 0% -8%, rgba(26, 109, 255, 0.2), transparent 55%),
+        radial-gradient(800px 520px at 100% 0%, rgba(56, 146, 255, 0.14), transparent 50%),
+        radial-gradient(700px 420px at 50% 100%, rgba(99, 140, 210, 0.12), transparent 45%),
+        linear-gradient(180deg, var(--bg-a), var(--bg-b) 48%, var(--bg-c));
+      min-height: 100vh;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100% - (var(--page-pad) * 2), var(--max));
+      margin: 0 auto;
+      padding: 0.85rem 0 calc(3.5rem + var(--safe-bottom));
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.75rem;
+      padding: 1.1rem 0 1.5rem;
+      overflow: hidden;
+    }
+
+    .hero-visual {
+      position: absolute;
+      inset: 0;
+      border-radius: 22px;
+      background:
+        linear-gradient(145deg, #0b1f3f 0%, #1347a8 48%, #1a7dff 100%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.08'%3E%3Cpath d='M0 40h80M40 0v80'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover, 48px 48px;
+      box-shadow: var(--shadow-soft);
+      transform: scale(0.985);
+      opacity: 0;
+      animation: heroIn 1s var(--ease) 0.05s forwards;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      right: -18%;
+      top: 8%;
+      width: min(58vw, 280px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.2), transparent 62%);
+      animation: floatOrb 8s ease-in-out infinite;
+    }
+
+    .hero-top {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 1.2rem 1.15rem 0;
+      opacity: 0;
+      animation: rise 0.8s var(--ease) 0.25s forwards;
+    }
+
+    .hero-meta {
+      opacity: 0.78;
+      font-size: 0.72rem;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      margin-top: 0.3rem;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      min-width: 0;
+    }
+
+    .project-logo {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 0.7rem;
+      flex-shrink: 0;
+      object-fit: cover;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .brand {
+      font-family: "Unbounded", sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.35rem, 6.2vw, 2.35rem);
+      letter-spacing: -0.03em;
+      color: #fff;
+      text-transform: none;
+      line-height: 1.15;
+    }
+
+    .week-chip {
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 0.45rem 0.75rem;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.08);
+      white-space: normal;
+      max-width: 100%;
+      line-height: 1.35;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-copy {
+      position: relative;
+      padding: 0 1.15rem 1.35rem;
+      color: #fff;
+      max-width: 34rem;
+      opacity: 0;
+      animation: rise 0.9s var(--ease) 0.4s forwards;
+    }
+
+    .hero-copy h1 {
+      margin: 0 0 0.7rem;
+      font-family: "Unbounded", sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.45rem, 6.8vw, 3.1rem);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      word-break: break-word;
+    }
+
+    .hero-copy p {
+      margin: 0 0 1.15rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 30rem;
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border-radius: 12px;
+      padding: 0.78rem 0.7rem;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease), background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: #fff;
+      color: var(--ink);
+    }
+    .btn-primary:hover { background: #eef4ff; }
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.14); }
+
+    /* —— Sections —— */
+    section {
+      margin-top: 1.75rem;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    section.in { opacity: 1; transform: none; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: "Unbounded", sans-serif;
+      font-size: clamp(1.1rem, 4.5vw, 1.45rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      margin: 0.3rem 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .kicker {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Metrics */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    .metric {
+      position: relative;
+      padding: 0.95rem 0.9rem 0.9rem;
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .metric:first-child {
+      grid-column: 1 / -1;
+      background:
+        linear-gradient(135deg, rgba(26, 109, 255, 0.14), transparent 55%),
+        var(--surface-strong);
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .metric .value {
+      margin-top: 0.3rem;
+      font-family: "Unbounded", sans-serif;
+      font-size: clamp(1.55rem, 5.5vw, 2.35rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .metric .delta {
+      margin-top: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-deep);
+      line-height: 1.35;
+    }
+
+    .metric .delta.down { color: var(--warn); }
+
+    .metric-bar {
+      margin-top: 0.75rem;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(15, 27, 45, 0.08);
+      overflow: hidden;
+    }
+
+    .metric-bar > i {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #0d4fd6, #3b8bff);
+      transition: width 1.1s var(--ease);
+    }
+
+    /* Tracks */
+    .tracks {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .track {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "name pct"
+        "desc desc";
+      gap: 0.35rem 0.75rem;
+      align-items: start;
+      padding: 0.95rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+
+    .track-name {
+      grid-area: name;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent-deep);
+    }
+
+    .track-body { grid-area: desc; min-width: 0; }
+
+    .track-desc {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .progress {
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(15, 27, 45, 0.08);
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+
+    .progress > i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+      border-radius: inherit;
+      transition: width 1s var(--ease);
+    }
+
+    .track-pct {
+      grid-area: pct;
+      font-family: "Unbounded", sans-serif;
+      font-size: 0.95rem;
+      min-width: 2.6rem;
+      text-align: right;
+      color: var(--ink);
+      padding-top: 0.1rem;
+    }
+
+    /* Wins / list */
+    .split {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .panel {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.05rem;
+    }
+
+    .panel h3 {
+      margin: 0 0 0.9rem;
+      font-size: 1rem;
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+    }
+
+    .dot {
+      width: 0.65rem;
+      height: 0.65rem;
+      margin-top: 0.4rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .dot.warn { background: var(--warn); }
+    .dot.muted { background: #8aa39a; }
+
+    .list strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .list span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 0;
+      padding-left: 0.25rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.55rem;
+      top: 0.4rem;
+      bottom: 0.4rem;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), rgba(15, 27, 45, 0.08));
+    }
+
+    .t-item {
+      position: relative;
+      padding: 0 0 1.25rem 2rem;
+    }
+
+    .t-item:last-child { padding-bottom: 0; }
+
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: 0.28rem;
+      top: 0.35rem;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .t-day {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 0.2rem;
+    }
+
+    .t-item h4 {
+      margin: 0 0 0.25rem;
+      font-size: 0.98rem;
+    }
+
+    .t-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Looking ahead */
+    .plan-grid {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .plan {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.9rem;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .prio {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-family: "Unbounded", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+    }
+
+    .prio.p2 { background: rgba(56, 146, 255, 0.14); color: #1d5db8; }
+    .prio.p3 { background: var(--warn-soft); color: var(--warn); }
+
+    .plan h4 { margin: 0 0 0.2rem; font-size: 0.95rem; }
+    .plan p { margin: 0; color: var(--muted); font-size: 0.84rem; line-height: 1.45; }
+
+    /* Reflection */
+    .quote {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 1.2rem 1.1rem 1.15rem;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(26, 109, 255, 0.14), rgba(56, 146, 255, 0.08)),
+        var(--surface-strong);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .quote::before {
+      content: "“";
+      display: block;
+      font-family: "Unbounded", sans-serif;
+      font-size: 2.4rem;
+      line-height: 0.8;
+      color: var(--accent);
+      opacity: 0.55;
+      margin-bottom: 0.55rem;
+    }
+
+    .quote p {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: clamp(0.98rem, 3.6vw, 1.2rem);
+      font-weight: 600;
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    .quote footer {
+      display: block;
+      margin: 1rem 0 0;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .edit-hint {
+      margin-top: 1.35rem;
+      padding: 0.85rem 0.95rem;
+      border-radius: 14px;
+      background: rgba(15, 27, 45, 0.04);
+      border: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    /* Sticky mobile nav */
+    .jump {
+      position: sticky;
+      top: max(0.5rem, env(safe-area-inset-top));
+      z-index: 5;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.2rem;
+      padding: 0.3rem;
+      margin: 0.75rem 0 0;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(15, 45, 96, 0.06);
+    }
+    .jump a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.55rem 0.15rem;
+      border-radius: 10px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .jump a:hover,
+    .jump a:active { background: var(--accent-soft); color: var(--accent-deep); }
+
+    @keyframes heroIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-14px) scale(1.03); }
+    }
+
+    @media (min-width: 640px) {
+      :root { --page-pad: 1.25rem; }
+      .hero {
+        min-height: min(58vh, 520px);
+        justify-content: space-between;
+        padding: 0;
+        gap: 0;
+      }
+      .hero-visual {
+        border-radius: 26px;
+        transform: none;
+      }
+      .hero-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1.6rem 1.85rem 0;
+        font-size: 0.84rem;
+      }
+      .hero-meta { font-size: 0.8rem; text-transform: none; letter-spacing: 0; }
+      .week-chip {
+        flex-shrink: 0;
+        white-space: nowrap;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        padding: 0.55rem 0.85rem;
+      }
+      .brand { font-size: clamp(1.7rem, 2.6vw, 2.35rem); }
+      .project-logo { width: 2.75rem; height: 2.75rem; border-radius: 0.8rem; }
+      .hero-copy {
+        padding: 2.5rem 1.85rem 2rem;
+        max-width: 40rem;
+      }
+      .hero-copy h1 {
+        font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+        max-width: 16ch;
+      }
+      .hero-copy p {
+        font-size: 1.02rem;
+        max-width: 36rem;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+      .btn {
+        border-radius: 999px;
+        padding: 0.78rem 1.15rem;
+        font-size: 0.95rem;
+      }
+      .jump {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        overflow: visible;
+        border-radius: 999px;
+        padding: 0.4rem;
+        margin-top: 1.1rem;
+        width: fit-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .jump a {
+        flex: 0 0 auto;
+        font-size: 0.84rem;
+        padding: 0.5rem 0.95rem;
+        border-radius: 999px;
+      }
+      .track {
+        grid-template-columns: 5.5rem minmax(0, 1fr) auto;
+        grid-template-areas: "name desc pct";
+        align-items: center;
+        gap: 0.9rem 1rem;
+      }
+      .metrics {
+        gap: 0.85rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .metric { padding: 1.15rem 1.15rem 1.05rem; }
+      .metric .value { font-size: clamp(1.8rem, 2.4vw, 2.35rem); }
+      .panel { padding: 1.25rem 1.35rem; border-radius: 18px; }
+      .quote { padding: 1.5rem 1.6rem 1.35rem; border-radius: 22px; }
+      .quote::before { font-size: 2.8rem; margin-bottom: 0.65rem; }
+      .quote p { font-size: 1.18rem; line-height: 1.7; max-width: 42em; }
+      .quote footer { font-size: 0.9rem; }
+      section { margin-top: 2.25rem; }
+      .section-head h2 { font-size: 1.4rem; }
+      .section-head p { font-size: 0.92rem; }
+    }
+
+    @media (min-width: 900px) {
+      :root { --page-pad: 2rem; }
+      .page {
+        padding-top: 1.75rem;
+        padding-bottom: 4.5rem;
+      }
+      .hero {
+        min-height: min(62vh, 560px);
+      }
+      .hero-top {
+        padding: 1.85rem 2.4rem 0;
+      }
+      .hero-copy {
+        padding: 3rem 2.4rem 2.35rem;
+        max-width: 44rem;
+      }
+      .hero-copy h1 {
+        font-size: 2.75rem;
+        max-width: 14ch;
+        line-height: 1.12;
+      }
+      .hero-copy p {
+        font-size: 1.05rem;
+        margin-bottom: 1.35rem;
+      }
+      .hero-visual::after {
+        width: min(34vw, 320px);
+        right: -4%;
+        top: 14%;
+      }
+      .metrics {
+        grid-template-columns: 1.35fr repeat(3, minmax(0, 1fr));
+      }
+      .metric:first-child { grid-column: auto; }
+      .metric .label { font-size: 0.88rem; }
+      .metric .delta { font-size: 0.84rem; }
+      .split {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.1rem;
+        align-items: stretch;
+      }
+      .tracks { gap: 0.85rem; }
+      .track {
+        grid-template-columns: 6.5rem minmax(0, 1fr) 3.5rem;
+        padding: 1.05rem 1.2rem;
+      }
+      .track-desc { font-size: 0.92rem; }
+      .plan-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+      }
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.15rem;
+        padding: 0.25rem 0 0;
+      }
+      .timeline::before {
+        left: 0.35rem;
+        right: 0.35rem;
+        top: 0.55rem;
+        bottom: auto;
+        width: auto;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), rgba(15, 27, 45, 0.08));
+      }
+      .t-item {
+        padding: 1.75rem 0.15rem 0 0;
+      }
+      .t-item:last-child { padding-bottom: 0; }
+      .t-item::before {
+        left: 0.1rem;
+        top: 0.28rem;
+      }
+      .jump { margin-top: 1.25rem; }
+    }
+
+    @media (min-width: 1200px) {
+      :root { --page-pad: 2.5rem; --max: 1180px; }
+      .hero { min-height: 540px; }
+      .hero-copy h1 { font-size: 2.9rem; }
+    }
+
+    @media (max-width: 380px) {
+      .jump a { font-size: 0.66rem; padding: 0.5rem 0.1rem; }
+      .hero-actions { grid-template-columns: 1fr; }
+      .metric .value { font-size: 1.45rem; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      body::before, .jump, .hero-actions, .edit-hint,
+      .poster-modal, #posterStage { display: none !important; }
+      .hero { min-height: auto; page-break-after: avoid; }
+      .hero-visual { box-shadow: none; }
+      section { opacity: 1 !important; transform: none !important; break-inside: avoid; }
+      .page { width: 100%; max-width: none; }
+    }
+
+    /* Poster export */
+    .poster-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(8, 18, 36, 0.72);
+      backdrop-filter: blur(10px);
+    }
+    .poster-modal.open { display: flex; }
+    .poster-sheet {
+      width: min(100%, 420px);
+      max-height: min(92vh, 900px);
+      overflow: auto;
+      background: #0f1b2d;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 1rem;
+    }
+    .poster-sheet header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    .poster-sheet h3 {
+      margin: 0;
+      font-family: "Unbounded", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .poster-close {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: #fff;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .poster-preview {
+      width: 100%;
+      border-radius: 14px;
+      background: #091221;
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .poster-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .poster-preview .poster-status {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .poster-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+    }
+    .poster-actions .btn {
+      border-radius: 12px;
+      color: var(--ink);
+    }
+    .poster-actions .btn-ghost {
+      color: #fff;
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    #posterStage {
+      position: fixed;
+      left: -10000px;
+      top: 0;
+      width: 1080px;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .poster-card {
+      width: 1080px;
+      min-height: 1620px;
+      padding: 72px 64px 64px;
+      color: #fff;
+      font-family: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(900px 700px at 100% 0%, rgba(56, 146, 255, 0.35), transparent 55%),
+        radial-gradient(700px 500px at 0% 100%, rgba(26, 109, 255, 0.28), transparent 50%),
+        linear-gradient(160deg, #071525 0%, #0d2d6b 48%, #1246a8 100%);
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+    .poster-card::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 28px;
+      pointer-events: none;
+    }
+    .poster-card::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -80px;
+      top: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.14), transparent 60%);
+    }
+    .poster-inner { position: relative; z-index: 1; }
+    .poster-kicker {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 36px;
+    }
+    .poster-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+    .poster-logo {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.12);
+      border: 2px solid rgba(255,255,255,0.22);
+    }
+    .poster-brand {
+      font-family: "Unbounded", "PingFang SC", sans-serif;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: #fff;
+      text-transform: none;
+    }
+    .poster-foot-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .poster-foot-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .poster-week {
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-size: 22px;
+      white-space: nowrap;
+      background: rgba(255,255,255,0.08);
+    }
+    .poster-title {
+      font-family: "Unbounded", "PingFang SC", sans-serif;
+      font-size: 68px;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      margin: 0 0 28px;
+      max-width: 14ch;
+      font-weight: 600;
+    }
+    .poster-sub {
+      margin: 0 0 48px;
+      font-size: 28px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.78);
+      max-width: 18em;
+    }
+    .poster-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+    .poster-metric {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 28px 24px;
+      min-height: 180px;
+    }
+    .poster-metric.hero-metric {
+      background: linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.08));
+    }
+    .poster-metric .plabel {
+      font-size: 22px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 12px;
+    }
+    .poster-metric .pvalue {
+      font-family: "Unbounded", sans-serif;
+      font-size: 64px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .poster-metric .pdelta {
+      font-size: 22px;
+      font-weight: 600;
+      color: #9fd0ff;
+    }
+    .poster-block {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .poster-block h4 {
+      margin: 0 0 22px;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9fd0ff;
+      font-weight: 700;
+    }
+    .poster-wins { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+    .poster-wins li {
+      display: grid;
+      grid-template-columns: 14px 1fr;
+      gap: 16px;
+      align-items: start;
+      font-size: 30px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    .poster-wins li::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: 12px;
+      border-radius: 50%;
+      background: #4da3ff;
+    }
+    .poster-tracks { display: grid; gap: 18px; }
+    .poster-track {
+      display: grid;
+      grid-template-columns: 96px 1fr 72px;
+      gap: 16px;
+      align-items: center;
+      font-size: 26px;
+    }
+    .poster-track .name { font-weight: 700; }
+    .poster-track .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+    .poster-track .bar > i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #0d4fd6, #5eb0ff);
+      border-radius: inherit;
+    }
+    .poster-track .pct {
+      font-family: "Unbounded", sans-serif;
+      text-align: right;
+    }
+    .poster-quote {
+      font-family: "Unbounded", "PingFang SC", sans-serif;
+      font-size: 34px;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .poster-cheer {
+      margin-top: 28px;
+      padding: 28px 30px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(159, 208, 255, 0.28);
+    }
+    .poster-cheer .cheer-label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9fd0ff;
+    }
+    .poster-cheer p {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.92);
+    }
+    .poster-foot {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 22px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="top">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-top">
+        <div>
+          <div class="brand-lockup">
+            <img
+              id="projectLogo"
+              class="project-logo"
+              src="logo.svg"
+              width="44"
+              height="44"
+              alt="项目 Logo"
+            />
+            <div class="brand">Contens 汇报</div>
+          </div>
+          <div class="hero-meta">产品 · 运营 · 设计 · 开发 · 投放</div>
+        </div>
+        <div class="week-chip" id="weekLabel">W31 · 07.28 – 08.03</div>
+      </div>
+      <div class="hero-copy">
+        <h1>把增长实验收成可复用的产品节奏</h1>
+        <p>本周聚焦转化漏斗诊断、落地页改版上线，以及投放素材的标准化生产流。跨职能事项推进顺畅，未来转入放量验证。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#metrics">查看本周数据</a>
+          <button class="btn btn-ghost" type="button" id="exportPosterBtn">导出海报</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="jump" aria-label="章节导航">
+      <a href="#metrics">数据</a>
+      <a href="#tracks">业务线</a>
+      <a href="#wins">成果</a>
+      <a href="#timeline">节奏</a>
+      <a href="#next">计划</a>
+      <a href="#note">复盘</a>
+    </nav>
+
+    <section id="metrics">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Week Snapshot</span>
+          <h2>本周关键指标</h2>
+          <p>用 4 个数字概括产出与效果，方便周会对齐。</p>
+        </div>
+      </div>
+      <div class="metrics">
+        <article class="metric">
+          <div class="label">核心目标完成度</div>
+          <div class="value"><span data-count="86">0</span>%</div>
+          <div class="delta">较上周 +12%</div>
+          <div class="metric-bar"><i data-width="86"></i></div>
+        </article>
+        <article class="metric">
+          <div class="label">交付事项</div>
+          <div class="value"><span data-count="11">0</span></div>
+          <div class="delta">计划 13 · 完成率 85%</div>
+        </article>
+        <article class="metric">
+          <div class="label">转化提升</div>
+          <div class="value"><span data-count="18">0</span>%</div>
+          <div class="delta">落地页 A/B 胜出组</div>
+        </article>
+        <article class="metric">
+          <div class="label">投放 ROI</div>
+          <div class="value"><span data-count="3.2" data-decimals="1">0</span></div>
+          <div class="delta down">预算消耗 92% · 需控量</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tracks">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Cross-functional</span>
+          <h2>五线推进进度</h2>
+          <p>同一套模板适配产品、运营、设计、开发与投放。</p>
+        </div>
+      </div>
+      <div class="tracks">
+        <div class="track">
+          <div class="track-name">产品</div>
+          <div class="track-body">
+            <div class="track-desc">漏斗诊断结论输出，需求清单冻结到 V1.2</div>
+            <div class="progress"><i data-width="90"></i></div>
+          </div>
+          <div class="track-pct">90%</div>
+        </div>
+        <div class="track">
+          <div class="track-name">运营</div>
+          <div class="track-body">
+            <div class="track-desc">激活触达策略改版，完成 2 轮用户访谈</div>
+            <div class="progress"><i data-width="75"></i></div>
+          </div>
+          <div class="track-pct">75%</div>
+        </div>
+        <div class="track">
+          <div class="track-name">设计</div>
+          <div class="track-body">
+            <div class="track-desc">落地页与素材组件库上线，规范文档同步</div>
+            <div class="progress"><i data-width="95"></i></div>
+          </div>
+          <div class="track-pct">95%</div>
+        </div>
+        <div class="track">
+          <div class="track-name">开发</div>
+          <div class="track-body">
+            <div class="track-desc">埋点补齐 + 落地页上线，灰度 30% 流量</div>
+            <div class="progress"><i data-width="80"></i></div>
+          </div>
+          <div class="track-pct">80%</div>
+        </div>
+        <div class="track">
+          <div class="track-name">投放</div>
+          <div class="track-body">
+            <div class="track-desc">素材矩阵搭建完成，3 条计划进入放量前夜</div>
+            <div class="progress"><i data-width="70"></i></div>
+          </div>
+          <div class="track-pct">70%</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wins">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Outcomes</span>
+          <h2>成果与风险</h2>
+          <p>先说做成了什么，再说卡住了什么。</p>
+        </div>
+      </div>
+      <div class="split">
+        <div class="panel" id="winsPanel">
+          <h3>本周成果</h3>
+          <ul class="list">
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>落地页转化 +18%</strong>
+                <span>新视觉 + 更短表单胜出，已全量切到胜出组。</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>素材生产 SOP 定稿</strong>
+                <span>从 briefing 到出片压缩到 2 天，设计/投放可并行。</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>核心漏斗诊断完成</strong>
+                <span>明确注册→激活为最大跌落点，未来专项攻坚。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>风险与阻塞</h3>
+          <ul class="list">
+            <li>
+              <span class="dot warn" aria-hidden="true"></span>
+              <div>
+                <strong>投放成本抬升</strong>
+                <span>优质素材衰减快，需未来补充 6 条新创意。</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot warn" aria-hidden="true"></span>
+              <div>
+                <strong>数据口径不一致</strong>
+                <span>投放后台与产品埋点对激活定义不同，对齐中。</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot muted" aria-hidden="true"></span>
+              <div>
+                <strong>依赖评审延期 1 天</strong>
+                <span>不影响主线，但压缩了灰度观察窗口。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Cadence</span>
+          <h2>本周节奏</h2>
+          <p>关键节点，方便回溯决策与协作。</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-day">周一</div>
+            <h4>目标对齐 & 漏斗拆解</h4>
+            <p>和产品/投放对齐本周唯一目标：提升激活率。</p>
+          </div>
+          <div class="t-item">
+            <div class="t-day">周三</div>
+            <h4>设计评审通过，开发提测</h4>
+            <p>落地页与埋点方案冻结，进入联调。</p>
+          </div>
+          <div class="t-item">
+            <div class="t-day">周五</div>
+            <h4>A/B 出结果，灰度放量</h4>
+            <p>胜出组全量；投放侧准备未来放量素材包。</p>
+          </div>
+          <div class="t-item">
+            <div class="t-day">周日</div>
+            <h4>汇报复盘</h4>
+            <p>沉淀实验结论，更新未来优先级。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Next Week</span>
+          <h2>未来计划</h2>
+          <p>只保留能推动主目标的事项。</p>
+        </div>
+      </div>
+      <div class="plan-grid">
+        <article class="plan">
+          <div class="prio">P0</div>
+          <div>
+            <h4>激活流程专项改版</h4>
+            <p>产品方案 + 设计初稿，目标激活率再 +10%</p>
+          </div>
+        </article>
+        <article class="plan">
+          <div class="prio p2">P1</div>
+          <div>
+            <h4>投放放量验证</h4>
+            <p>3 条计划放量，日预算上限与熔断规则明确</p>
+          </div>
+        </article>
+        <article class="plan">
+          <div class="prio p2">P1</div>
+          <div>
+            <h4>统一激活口径</h4>
+            <p>产品埋点 / 投放后台 / 报表三方对齐文档</p>
+          </div>
+        </article>
+        <article class="plan">
+          <div class="prio p3">P2</div>
+          <div>
+            <h4>素材库补货</h4>
+            <p>产出 6 条新创意，覆盖 2 个人群包</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="note">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Reflection</span>
+          <h2>一句话复盘</h2>
+          <p>留给自己和未来的提醒。</p>
+        </div>
+      </div>
+      <blockquote class="quote">
+        <p>跨职能推进的关键不是会更多，而是共用一个可量化的周目标，并让设计、开发、投放在同一节奏上交付。</p>
+        <footer>下次改进：周中做一次 15 分钟指标同步，避免周五才发现口径偏差。</footer>
+      </blockquote>
+    </section>
+
+    <div class="edit-hint">
+      使用方式：复制本文件为「汇报-YYYY-Wxx.html」，改标题、指标、五线进度、成果/风险与未来计划即可。替换同目录 <code>logo.svg</code>（或改 <code>#projectLogo</code> 的 src）即可更换项目 LOGO，海报导出时会一并带上。
+    </div>
+
+    <footer class="footer">
+      <span>Personal Weekly Brief · 通用模板</span>
+      <span id="generatedAt"></span>
+    </footer>
+  </div>
+
+  <div id="posterStage" aria-hidden="true"></div>
+
+  <div class="poster-modal" id="posterModal" role="dialog" aria-modal="true" aria-labelledby="posterModalTitle">
+    <div class="poster-sheet">
+      <header>
+        <h3 id="posterModalTitle">高光海报</h3>
+        <button class="poster-close" type="button" id="posterCloseBtn" aria-label="关闭">×</button>
+      </header>
+      <div class="poster-preview" id="posterPreview">
+        <div class="poster-status">正在生成海报…</div>
+      </div>
+      <div class="poster-actions">
+        <button class="btn btn-primary" type="button" id="posterDownloadBtn" disabled>下载图片</button>
+        <button class="btn btn-ghost" type="button" id="posterCloseBtn2">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const reveal = () => {
+        document.querySelectorAll("section").forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < window.innerHeight * 0.88) el.classList.add("in");
+        });
+      };
+
+      const animateBars = () => {
+        document.querySelectorAll("[data-width]").forEach((el) => {
+          requestAnimationFrame(() => {
+            el.style.width = el.getAttribute("data-width") + "%";
+          });
+        });
+      };
+
+      const animateCounts = () => {
+        document.querySelectorAll("[data-count]").forEach((el) => {
+          const target = parseFloat(el.getAttribute("data-count"));
+          const decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+          const duration = 900;
+          const start = performance.now();
+          const tick = (now) => {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = (target * eased).toFixed(decimals);
+            if (t < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      };
+
+      const setMeta = () => {
+        const now = new Date();
+        const el = document.getElementById("generatedAt");
+        if (el) {
+          el.textContent = "更新于 " + now.toLocaleString("zh-CN", {
+            month: "numeric",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+        }
+      };
+
+      const text = (el, fallback = "") => (el ? el.textContent.trim() : fallback);
+
+      const DEFAULT_LOGO =
+        "data:image/svg+xml," +
+        encodeURIComponent(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="20" fill="#0D4FD6"/><path d="M22 52V28h12.2c7.4 0 12.1 4.1 12.1 10.4 0 6.4-4.7 10.5-12.1 10.5H28.6V52H22zm6.6-9.3h5c3.7 0 5.9-1.9 5.9-5.1S37.3 32.5 33.6 32.5h-5v10.2z" fill="#fff"/><circle cx="58" cy="50" r="7" fill="#5EB0FF"/></svg>`
+        );
+
+      const getLogoDataUrl = async () => {
+        const img = document.getElementById("projectLogo");
+        if (!img) return DEFAULT_LOGO;
+
+        const waitDecode = async () => {
+          if (img.complete && img.naturalWidth) return;
+          await new Promise((resolve, reject) => {
+            img.addEventListener("load", resolve, { once: true });
+            img.addEventListener("error", reject, { once: true });
+          });
+          if (img.decode) await img.decode().catch(() => {});
+        };
+
+        try {
+          await waitDecode();
+          if (img.src.startsWith("data:")) return img.src;
+
+          const canvas = document.createElement("canvas");
+          const size = Math.max(img.naturalWidth || 160, img.naturalHeight || 160, 160);
+          canvas.width = size;
+          canvas.height = size;
+          const ctx = canvas.getContext("2d");
+          const scale = Math.min(size / img.naturalWidth, size / img.naturalHeight);
+          const w = img.naturalWidth * scale;
+          const h = img.naturalHeight * scale;
+          ctx.clearRect(0, 0, size, size);
+          ctx.drawImage(img, (size - w) / 2, (size - h) / 2, w, h);
+          return canvas.toDataURL("image/png");
+        } catch {
+          return DEFAULT_LOGO;
+        }
+      };
+
+      const collectHighlights = () => {
+        const brand = text(document.querySelector(".brand"), "Contens 汇报");
+        const week = text(document.querySelector("#weekLabel"), "");
+        const title = text(document.querySelector(".hero-copy h1"), "本周高光时刻");
+        const sub = text(document.querySelector(".hero-copy p"), "");
+        const quote = text(document.querySelector(".quote p"), "");
+
+        const metrics = [...document.querySelectorAll(".metric")].map((m) => {
+          const label = text(m.querySelector(".label"));
+          const countEl = m.querySelector("[data-count]");
+          const raw = countEl ? countEl.getAttribute("data-count") : text(m.querySelector(".value"));
+          const decimals = countEl ? parseInt(countEl.getAttribute("data-decimals") || "0", 10) : 0;
+          const valueNode = m.querySelector(".value");
+          let suffix = "";
+          if (countEl && valueNode) {
+            const clone = valueNode.cloneNode(true);
+            const span = clone.querySelector("[data-count]");
+            if (span) span.remove();
+            suffix = clone.textContent.trim();
+          }
+          const valueNum = parseFloat(raw);
+          const value = Number.isFinite(valueNum)
+            ? valueNum.toFixed(decimals) + suffix
+            : text(m.querySelector(".value"));
+          const delta = text(m.querySelector(".delta"));
+          const boost = /[+]/.test(delta) ? 30 : 0;
+          const score = (Number.isFinite(valueNum) ? valueNum : 0) + boost;
+          return { label, value, delta, score };
+        });
+
+        metrics.sort((a, b) => b.score - a.score);
+        const topMetrics = metrics.slice(0, 3);
+
+        const wins = [...document.querySelectorAll("#winsPanel .list li strong")]
+          .map((el) => text(el))
+          .filter(Boolean)
+          .slice(0, 3);
+
+        const tracks = [...document.querySelectorAll(".track")]
+          .map((t) => ({
+            name: text(t.querySelector(".track-name")),
+            pct: parseInt(text(t.querySelector(".track-pct")), 10) || 0,
+          }))
+          .sort((a, b) => b.pct - a.pct)
+          .slice(0, 2);
+
+        return { brand, week, title, sub, quote, topMetrics, wins, tracks };
+      };
+
+      const escapeHtml = (str) =>
+        String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+
+      const CHEER_QUOTES = [
+        "慢慢来，比较快；把事情做对，比做得多更重要。",
+        "你已经比昨天的自己更靠近目标一步。",
+        "结果会奖励那些持续出现的人。",
+        "不必完美，但要推进；推进本身就是胜利。",
+        "好的一周，不是没有困难，而是困难没有打断你。",
+        "专注一件真正重要的事，比忙完十件琐事更强。",
+        "今天的小进展，会变成未来的大复利。",
+        "别和别人比速度，和自己比是否还在路上。",
+        "你负责播种和浇水，时间会负责发芽。",
+        "压力说明你在成长区，而不是舒适区。",
+        "把复杂拆小，把小步走稳，奇迹就会出现。",
+        "完成比完美更有力量，发布比纠结更有价值。",
+        "每一次复盘，都是给未来的自己加薪。",
+        "坚持做难而正确的事，回报往往迟到但不缺席。",
+        "你不是一个人在战斗，节奏对齐，就能一起赢。",
+        "允许自己休息，也允许自己再次出发。",
+        "高光不是偶然，是无数次默默推进的结果。",
+        "先做成一件小事，再做成一件更大的事。",
+        "世界不会因为你停下来而停，但你会因为继续而发光。",
+        "把焦虑换成行动清单，把担心换成下一步。",
+      ];
+
+      const randomCheer = () =>
+        CHEER_QUOTES[Math.floor(Math.random() * CHEER_QUOTES.length)];
+
+      const buildPoster = (data) => {
+        const logoSrc = data.logoUrl || DEFAULT_LOGO;
+        const cheer = data.cheer || randomCheer();
+        const metricsHtml = data.topMetrics
+          .map((m, i) => `
+            <div class="poster-metric ${i === 0 ? "hero-metric" : ""}">
+              <div class="plabel">${escapeHtml(m.label)}</div>
+              <div class="pvalue">${escapeHtml(m.value)}</div>
+              <div class="pdelta">${escapeHtml(m.delta)}</div>
+            </div>
+          `)
+          .join("");
+
+        const winsHtml = data.wins.map((w) => `<li>${escapeHtml(w)}</li>`).join("");
+        const tracksHtml = data.tracks
+          .map((t) => `
+            <div class="poster-track">
+              <div class="name">${escapeHtml(t.name)}</div>
+              <div class="bar"><i style="width:${t.pct}%"></i></div>
+              <div class="pct">${t.pct}%</div>
+            </div>
+          `)
+          .join("");
+
+        return `
+          <div class="poster-card" id="posterCard">
+            <div class="poster-inner">
+              <div class="poster-kicker">
+                <div class="poster-brand-wrap">
+                  <img class="poster-logo" src="${logoSrc}" alt="项目 Logo" width="88" height="88" />
+                  <div class="poster-brand">${escapeHtml(data.brand)}</div>
+                </div>
+                <div class="poster-week">${escapeHtml(data.week)}</div>
+              </div>
+              <h2 class="poster-title">${escapeHtml(data.title)}</h2>
+              <p class="poster-sub">${escapeHtml(data.sub)}</p>
+              <div class="poster-metrics">${metricsHtml}</div>
+              <div class="poster-block">
+                <h4>本周高光</h4>
+                <ul class="poster-wins">${winsHtml}</ul>
+              </div>
+              <div class="poster-block">
+                <h4>最强推进</h4>
+                <div class="poster-tracks">${tracksHtml}</div>
+              </div>
+              <div class="poster-block">
+                <h4>复盘金句</h4>
+                <p class="poster-quote">${escapeHtml(data.quote)}</p>
+              </div>
+              <div class="poster-cheer">
+                <span class="cheer-label">今日加油</span>
+                <p>${escapeHtml(cheer)}</p>
+              </div>
+              <div class="poster-foot">
+                <div class="poster-foot-left">
+                  <img class="poster-foot-logo" src="${logoSrc}" alt="" width="44" height="44" />
+                  <span>HIGHLIGHT POSTER</span>
+                </div>
+                <span>自动提取 · 可分享</span>
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      let posterDataUrl = "";
+
+      const openModal = () => {
+        document.getElementById("posterModal").classList.add("open");
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        document.getElementById("posterModal").classList.remove("open");
+        document.body.style.overflow = "";
+      };
+
+      const setPreviewStatus = (msg) => {
+        document.getElementById("posterPreview").innerHTML =
+          `<div class="poster-status">${escapeHtml(msg)}</div>`;
+      };
+
+      const exportPoster = async () => {
+        const btn = document.getElementById("exportPosterBtn");
+        const downloadBtn = document.getElementById("posterDownloadBtn");
+        const preview = document.getElementById("posterPreview");
+        const stage = document.getElementById("posterStage");
+
+        openModal();
+        downloadBtn.disabled = true;
+        setPreviewStatus("正在提取高光元素…");
+        btn.disabled = true;
+
+        try {
+          if (typeof html2canvas !== "function") {
+            throw new Error("海报引擎加载失败，请检查网络后重试");
+          }
+
+          const data = collectHighlights();
+          if (!data.topMetrics.length || !data.wins.length) {
+            throw new Error("暂无可导出的高光内容");
+          }
+
+          data.logoUrl = await getLogoDataUrl();
+          data.cheer = randomCheer();
+          stage.innerHTML = buildPoster(data);
+          const card = document.getElementById("posterCard");
+          setPreviewStatus("正在渲染海报…");
+
+          const logoNodes = [...card.querySelectorAll("img.poster-logo, img.poster-foot-logo")];
+          await Promise.all(
+            logoNodes.map(
+              (node) =>
+                node.decode?.().catch(() => {}) ||
+                new Promise((resolve) => {
+                  if (node.complete) resolve();
+                  else node.onload = resolve;
+                })
+            )
+          );
+
+          if (document.fonts && document.fonts.ready) {
+            await document.fonts.ready;
+          }
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+          const canvas = await html2canvas(card, {
+            scale: 2,
+            backgroundColor: "#071525",
+            useCORS: true,
+            allowTaint: true,
+            logging: false,
+            width: 1080,
+            windowWidth: 1080,
+          });
+
+          posterDataUrl = canvas.toDataURL("image/png");
+          preview.innerHTML = "";
+          const img = new Image();
+          img.alt = "汇报高光海报";
+          img.src = posterDataUrl;
+          preview.appendChild(img);
+
+          downloadBtn.disabled = false;
+          downloadBtn.onclick = () => {
+            const a = document.createElement("a");
+            const week = (data.week || "week").replace(/\s+/g, "");
+            a.href = posterDataUrl;
+            a.download = `汇报海报-${week}.png`;
+            a.click();
+          };
+        } catch (err) {
+          setPreviewStatus(err.message || "生成失败，请稍后重试");
+        } finally {
+          btn.disabled = false;
+          stage.innerHTML = "";
+        }
+      };
+
+      document.getElementById("exportPosterBtn").addEventListener("click", exportPoster);
+      document.getElementById("posterCloseBtn").addEventListener("click", closeModal);
+      document.getElementById("posterCloseBtn2").addEventListener("click", closeModal);
+      document.getElementById("posterModal").addEventListener("click", (e) => {
+        if (e.target.id === "posterModal") closeModal();
+      });
+
+      setMeta();
+      reveal();
+      animateBars();
+      animateCounts();
+      window.addEventListener("scroll", reveal, { passive: true });
+    })();
+  </script>
+</body>
+</html>

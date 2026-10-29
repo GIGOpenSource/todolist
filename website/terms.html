@@ -1,0 +1,98 @@
+<!-- Upgrade Todolist 用户协议公开页面（多语言，上架审核用）。 -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Upgrade Terms of Use" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Terms of Use · Upgrade</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/site.css" />
+    <script>
+      ;(function () {
+        try {
+          var t = localStorage.getItem('upgrade_site_theme')
+          if (!t) {
+            t =
+              window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light')
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body data-legal-doc="terms">
+    <div class="ambient" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+    </div>
+    <div class="page">
+      <header class="shell topnav">
+        <a class="brand-lockup" href="./index.html" aria-label="Upgrade home">
+          <img src="./assets/logo.png" width="36" height="36" alt="" />
+          <span class="brand-word">Upgrade</span>
+        </a>
+        <nav class="nav-actions" aria-label="Primary">
+          <div class="lang-picker" id="langPicker">
+            <button
+              type="button"
+              class="lang-trigger"
+              id="langTrigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="langMenu"
+            >
+              <span class="lang-trigger-text" id="langTriggerLabel">English</span>
+              <svg class="lang-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                <path
+                  d="M2.5 4.5L6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="lang-menu" id="langMenu" role="listbox" hidden></ul>
+          </div>
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Theme">
+            <span id="themeIcon" aria-hidden="true">◐</span>
+          </button>
+        </nav>
+      </header>
+
+      <article class="shell legal-page">
+        <a class="legal-back" href="./index.html">‹ <span class="brand-word">Upgrade</span></a>
+        <h1 class="legal-title" id="legalTitle">Terms of Use</h1>
+        <p class="legal-updated" id="legalUpdated">Last updated: 2026-08-04</p>
+        <div id="legalBody"></div>
+      </article>
+
+      <footer class="shell site-footer">
+        <div class="footer-row">
+          <p class="footer-note" data-i18n="footerNote">Upgrade — free cloud-synced tasks</p>
+          <div class="footer-links">
+            <a href="./privacy.html" data-i18n="privacy">Privacy Policy</a>
+            <a href="./terms.html" data-i18n="terms" aria-current="page">Terms of Use</a>
+            <a id="footerContact" href="mailto:you@example.com">you@example.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/legal.js"></script>
+    <script src="./js/site.js"></script>
+  </body>
+</html>

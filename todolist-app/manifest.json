@@ -1,0 +1,90 @@
+{
+    "name" : "Upgrade",
+    "appid" : "__UNI__D40F400",
+    "description" : "Upgrade — 账号登录与云端同步待办",
+    "versionName" : "1.0.2",
+    "versionCode" : 2,
+    "transformPx" : false,
+    "vueVersion" : "3",
+    "h5" : {
+        "title" : "Upgrade",
+        "router" : {
+            "mode" : "hash",
+            "base" : "/app/"
+        }
+    },
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        }
+    },
+    "app-plus" : {
+        "statusbar" : {
+            "immersed" : true,
+            "style" : "dark",
+            "background" : "transparent"
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
+                "minSdkVersion" : 24,
+                "targetSdkVersion" : 36,
+                "customManifest" : "native/android/AndroidManifest.xml",
+                "excludePermissions" : [
+                    "<uses-permission android:name=\"android.permission.READ_MEDIA_IMAGES\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_MEDIA_VIDEO\"/>"
+                ]
+            },
+            "ios" : {
+                "dSYMs" : false,
+                "privacyDescription" : {
+                    "NSPhotoLibraryAddUsageDescription" : "用于将汇报海报保存到相册",
+                    "NSPhotoLibraryUsageDescription" : "用于将汇报海报保存到相册"
+                },
+                "idfa" : false
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "static/logo.png",
+                    "xhdpi" : "static/logo.png",
+                    "xxhdpi" : "static/logo.png",
+                    "xxxhdpi" : "static/logo.png"
+                },
+                "ios" : {
+                    "appstore" : "static/logo.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "splashscreen" : {
+            "waiting" : false,
+            "alwaysShowBeforeRender" : false
+        },
+        "modules" : {
+            "Camera" : {},
+            "Share" : {}
+        }
+    }
+}
